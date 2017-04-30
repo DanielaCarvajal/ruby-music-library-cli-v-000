@@ -4,6 +4,6 @@ class MP3File
   def initialize(file_name)
     @artist = file_name.split(" - ")[0]
     @song = file_name.split(" - ")[1]
-    @genre = file_name.split(" - ")[2].chomp(".mp3")
+    @genre = file_name.split(" - ")[2].gsub(".mp3")
   end
 end
